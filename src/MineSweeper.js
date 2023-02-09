@@ -8,12 +8,10 @@ const MineSweeper = (newGame, coordinates) => {
     board[1][0] = '*';board[1][1] = '*';board[1][2] = '-';
     board[2][0] = '-';board[2][1] = '*';board[2][2] = '-';
     
-    if(newGame) {
+    if(newGame)
         return newBoard(board);
-    }
-    else {
+    else
         return validateMines(board, coordinates);
-    }
 };
 
 const newBoard = (board) => {
@@ -35,6 +33,12 @@ const validateMines = (board, coordinates) => {
 
     if(board[x][y]==='*')
         return gameOver;
+    else
+        return findMines(board, x, y);
+};
+
+const findMines = (board, x, y) => {
+    return "3 bombs around your square.";
 };
 
 module.exports = MineSweeper;
