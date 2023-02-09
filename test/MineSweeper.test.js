@@ -20,4 +20,19 @@ describe('Should execute Mine Sweeper game and validate when the users wins or l
     const coordinates = '2,0';
     expect(MineSweeper(newGame, coordinates)).toBe(expectedResult);
   });
+
+  it('Should return \'2 bombs around your square.\' when the selected cell has a bomb', () => {
+    const expectedResult = "2 bombs around your square.";
+    const newGame = false;
+    const coordinates = '0,0';
+    expect(MineSweeper(newGame, coordinates)).toBe(expectedResult);
+  });
+
+  it('Should return \'2 bombs around your square.\' when the selected cell has a bomb', () => {
+    const expectedResult = "2 bombs around your square.";
+    const newGame = false;
+    const coordinates = '2,2';
+    expect(MineSweeper(newGame, coordinates)).toBe(expectedResult);
+  });
+
 });

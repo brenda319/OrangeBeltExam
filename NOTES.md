@@ -36,6 +36,5 @@ WTF:3
 ## Pomodoro 4
 WTF:5
 ✅: parse string to integer just one time
-🚧: Refactor findMines function to simplify the complexity
-TODO: Increase coverage to get all code covered
-TODO: Create test receiving the position '0,1'
+✅: Refactor findMines function to simplify the complexity
+✅: Increase coverage to get all code covered writting more test cases
