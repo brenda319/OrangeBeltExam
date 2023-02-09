@@ -16,5 +16,9 @@ TODO:
 ✅: Rename dummy classes to MineSweeper.js and MineSweeper.test.js
 ✅: In test file add test description
 ✅: Add a test to create a 3x3 game board
-🚧: Refactor to create a board with values
-TODO: Create test to receive the position '2,0', find a bomb and display the message 'BOOM! - Game Over.'
+✅: Refactor to create a board with values
+TODO: Create test to receive the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
+
+## Pomodoro 2
+TODO: Create test receiving the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
+TODO: Create a test receiving the position '2,0' should return the number of bombs found around the selected cell
