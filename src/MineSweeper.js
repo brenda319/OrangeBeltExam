@@ -44,27 +44,30 @@ const validateMines = (board, coordinates) => {
 
 const findMines = (board, x, y) => {
     const top = findTop(x), bot = findBot(x), right = findRight(y), left = findLeft(y);
+    
+    var neighboorsArray = new Array();
     let bombCounter = 0;
 
-    console.log(left);
-
-    if(board[x][top] === '*')
-        bombCounter++;
-    if(board[x][right] === '*')
-        bombCounter++;
-    if(board[x][bot] === '*')
-        bombCounter++;
-    if(board[x][left] === '*')
-        bombCounter++;
-    // if(board[top][left] === '*')
-    //     bombCounter++;
-    if(board[top][right] === '*')
-        bombCounter++;
-    // if(board[bot][left] === '*')
-    //     bombCounter++;
-    // if(board[bot][right] === '*')
-    //     bombCounter++;
+    findCoordinates(x+''+top, neighboorsArray);
+    findCoordinates(x+''+right, neighboorsArray);
+    findCoordinates(x+''+bot, neighboorsArray);
+    findCoordinates(x+''+left, neighboorsArray);
+    findCoordinates(top+''+left, neighboorsArray);
+    findCoordinates(top+''+right, neighboorsArray);
+    findCoordinates(bot+''+left, neighboorsArray);
+    findCoordinates(bot+''+right, neighboorsArray);
+    for (let i = 0; i<neighboorsArray.length; i++) {
+        const row = neighboorsArray[i][0];
+        const col = neighboorsArray[i][1];
+        if(board[row][col] === '*')
+            bombCounter++;
+    }
     return bombCounter + " bombs around your square.";
+};
+
+const findCoordinates = (coordinate, neighboorsArray) => {
+    if(neighboorsArray.indexOf(coordinate) === -1) 
+        neighboorsArray.push(coordinate);
 };
 
 const findTop = (x) => {
