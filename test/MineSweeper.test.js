@@ -6,4 +6,11 @@ describe('Should execute Mine Sweeper game and validate when the users wins or l
     const newGame = true;
     expect(MineSweeper(newGame)).toBe(expectedResult);
   });
+
+  it('Should return BOOM! - Game Over. when the selected cell has a bomb', () => {
+    const expectedResult = "BOOM! - Game Over.";
+    const newGame = false;
+    const coordinates = '1,1';
+    expect(MineSweeper(newGame, coordinates)).toBe(expectedResult);
+  });
 });

@@ -20,5 +20,5 @@ TODO:
 TODO: Create test to receive the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
 
 ## Pomodoro 2
-TODO: Create test receiving the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
+🚧: Create test receiving the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
 TODO: Create a test receiving the position '2,0' should return the number of bombs found around the selected cell
