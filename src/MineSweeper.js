@@ -42,11 +42,26 @@ const validateMines = (board, coordinates) => {
 };
 
 const findMines = (board, x, y) => {
-    const top = x-1, bot = x+1, right = y+1, left=y-1;
+    const top = parseInt(x)-1; bot = parseInt(x)+1, right = parseInt(y)+1, left=parseInt(y)-1;
     let bombCounter = 0;
+    console.log(top);
     if(board[x][top] === '*')
         bombCounter++;
-    return "3 bombs around your square.";
+    if(board[x][right] === '*')
+        bombCounter++;
+    if(board[x][bot] === '*')
+        bombCounter++;
+    if(board[x][left] === '*')
+        bombCounter++;
+    // if(board[top][left] === '*')
+    //     bombCounter++;
+    if(board[top][right] === '*')
+        bombCounter++;
+    // if(board[bot][left] === '*')
+    //     bombCounter++;
+    // if(board[bot][right] === '*')
+    //     bombCounter++;
+    return bombCounter + " bombs around your square.";
 };
 
 module.exports = MineSweeper;

@@ -31,5 +31,5 @@ WTF:3
     - In board generation use constants instead hardcoded string
     - User constant for board row/column separators
     - Remove console logs from code
-TODO: Refactor code to remove hardcoded return and add functionallity
+🚧: Refactor code to remove hardcoded return and add functionallity
 TODO: Create test receiving the position '0,1'
