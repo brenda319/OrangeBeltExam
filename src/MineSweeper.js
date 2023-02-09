@@ -38,7 +38,12 @@ const validateMines = (board, coordinates) => {
 };
 
 const findMines = (board, x, y) => {
-    return "3 bombs around your square.";
+    const top = x-1, bot = x+1, right = y+1, left=y-1;
+    let bombCounter = 0;
+    if(board[x][top] === '*')
+        bombCounter++;
+    console.log(bombCounter);
+    return "bombs around your square.";
 };
 
 module.exports = MineSweeper;

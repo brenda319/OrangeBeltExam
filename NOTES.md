@@ -22,4 +22,4 @@ TODO: Create test to receive the position '1,1', find a bomb and display the mes
 ## Pomodoro 2
 ✅: Create test receiving the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
 ✅: Create a test receiving the position '2,0' should return the number of bombs found around the selected cell
-TODO: Refactor code to remove hardcoded return and add functionallity
+🚧: Refactor code to remove hardcoded return and add functionallity
