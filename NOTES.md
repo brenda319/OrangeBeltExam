@@ -27,7 +27,7 @@ TODO: Create test to receive the position '1,1', find a bomb and display the mes
 
 ## Pomodoro 3
 WTF:3
-🚧: Solve WTF
+✅: Solve WTF
     - In board generation use constants instead hardcoded string
     - User constant for board row/column separators
     - Remove console logs from code

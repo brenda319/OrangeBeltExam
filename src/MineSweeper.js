@@ -18,12 +18,14 @@ const MineSweeper = (newGame, coordinates) => {
 
 const newBoard = (board) => {
     var newBoard = "";
+    const rowSeparator = '\n+-+-+-+\n';
+    const separator = '|';
     for (i = 0; i < board.length; i++) {
-        newBoard = newBoard + '\n+-+-+-+\n';
+        newBoard = newBoard + rowSeparator;
         for (j = 0; j < board[i].length; j++) {
-            newBoard = newBoard + '|' + board[i][j];
+            newBoard = newBoard + separator + board[i][j];
         }
-        newBoard = newBoard + '|';
+        newBoard = newBoard + separator;
     }
     return newBoard;
 };
@@ -44,7 +46,6 @@ const findMines = (board, x, y) => {
     let bombCounter = 0;
     if(board[x][top] === '*')
         bombCounter++;
-    console.log(bombCounter);
     return "3 bombs around your square.";
 };
 
