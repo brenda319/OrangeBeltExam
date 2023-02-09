@@ -13,8 +13,8 @@ Create a class to play Minesweeper game following the next steps:
 TODO:
 
 ## Pomodoro 1
-TODO: Rename dummy classes to MineSweeper.js and MineSweeper.test.js
-TODO: In test file add test description
-TODO: Add a test to create a 3x3 game board
+✅: Rename dummy classes to MineSweeper.js and MineSweeper.test.js
+✅: In test file add test description
+✅: Add a test to create a 3x3 game board
 TODO: Write te code needed to generate the board
 TODO: Refactor test created to add values in cells
