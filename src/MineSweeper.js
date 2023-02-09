@@ -20,6 +20,7 @@ const newBoard = (board) => {
     var newBoard = "";
     const rowSeparator = '\n+-+-+-+\n';
     const separator = '|';
+
     for (i = 0; i < board.length; i++) {
         newBoard = newBoard + rowSeparator;
         for (j = 0; j < board[i].length; j++) {
@@ -38,13 +39,15 @@ const validateMines = (board, coordinates) => {
     if(board[x][y]==='*')
         return gameOver;
     else
-        return findMines(board, x, y);
+        return findMines(board, parseInt(x), parseInt(y));
 };
 
 const findMines = (board, x, y) => {
-    const top = parseInt(x)-1; bot = parseInt(x)+1, right = parseInt(y)+1, left=parseInt(y)-1;
+    const top = findTop(x), bot = findBot(x), right = findRight(y), left = findLeft(y);
     let bombCounter = 0;
-    console.log(top);
+
+    console.log(left);
+
     if(board[x][top] === '*')
         bombCounter++;
     if(board[x][right] === '*')
@@ -62,6 +65,22 @@ const findMines = (board, x, y) => {
     // if(board[bot][right] === '*')
     //     bombCounter++;
     return bombCounter + " bombs around your square.";
+};
+
+const findTop = (x) => {
+    return x-1 > -1 ? x-1 : x;
+};
+
+const findBot = (x) => {
+    return x+1 < 3 ? x+1 : x;
+};
+
+const findRight = (y) => {
+    return y+1 < 3 ? y+1 : y;
+};
+
+const findLeft = (y) => {
+    return y-1 > -1 ? y-1 : y;
 };
 
 module.exports = MineSweeper;
