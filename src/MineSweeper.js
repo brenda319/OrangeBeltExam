@@ -1,12 +1,14 @@
 const MineSweeper = (newGame, coordinates) => {
     const emptyBoard = "+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+";
+    const dash = '-';
+    const bomb = '*';
     var board = new Array(2);
     for (var i = 0; i < 3; i++) {
         board[i] = new Array(2);
     }
-    board[0][0] = '-';board[0][1] = '-';board[0][2] = '-';
-    board[1][0] = '*';board[1][1] = '*';board[1][2] = '-';
-    board[2][0] = '-';board[2][1] = '*';board[2][2] = '-';
+    board[0][0] = dash;board[0][1] = dash;board[0][2] = dash;
+    board[1][0] = bomb;board[1][1] = bomb;board[1][2] = dash;
+    board[2][0] = dash;board[2][1] = bomb;board[2][2] = dash;
     
     if(newGame)
         return newBoard(board);
@@ -43,7 +45,7 @@ const findMines = (board, x, y) => {
     if(board[x][top] === '*')
         bombCounter++;
     console.log(bombCounter);
-    return "bombs around your square.";
+    return "3 bombs around your square.";
 };
 
 module.exports = MineSweeper;

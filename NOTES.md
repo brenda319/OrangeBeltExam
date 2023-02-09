@@ -13,6 +13,7 @@ Create a class to play Minesweeper game following the next steps:
 TODO:
 
 ## Pomodoro 1
+WTF: 1 I found it during the pomodoro
 ✅: Rename dummy classes to MineSweeper.js and MineSweeper.test.js
 ✅: In test file add test description
 ✅: Add a test to create a 3x3 game board
@@ -23,3 +24,12 @@ TODO: Create test to receive the position '1,1', find a bomb and display the mes
 ✅: Create test receiving the position '1,1', find a bomb and display the message 'BOOM! - Game Over.'
 ✅: Create a test receiving the position '2,0' should return the number of bombs found around the selected cell
 🚧: Refactor code to remove hardcoded return and add functionallity
+
+## Pomodoro 3
+WTF:3
+🚧: Solve WTF
+    - In board generation use constants instead hardcoded string
+    - User constant for board row/column separators
+    - Remove console logs from code
+TODO: Refactor code to remove hardcoded return and add functionallity
+TODO: Create test receiving the position '0,1'
