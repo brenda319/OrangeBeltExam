@@ -31,5 +31,11 @@ WTF:3
     - In board generation use constants instead hardcoded string
     - User constant for board row/column separators
     - Remove console logs from code
-🚧: Refactor code to remove hardcoded return and add functionallity
+✅: Refactor code to remove hardcoded return and add functionallity
+
+## Pomodoro 4
+WTF:5
+🚧: parse string to integer just one time
+TODO: Refactor findMines function to simplify the complexity
+TODO: Increase coverage to get all code covered
 TODO: Create test receiving the position '0,1'
